@@ -8,45 +8,56 @@ class Produto{
      }
     
      mostrarDados(){
-        //return this.nome + this.DatadeCadastro + this.Descricao + this.preco;
-          return `
-          <div>${this.nome}</div>
-          <div>${this.DatadeCadastro}</div>
-          <div>${this.Descricao}</div>
-          <div>${this.preco}</div>
-          
-          `;
+        returnn `
+        <div class = "azul">${this.nome}</div>
+        <div class = "azul">${this.DatadeCadastro}</div>
+        <div class = "azul">${this.Descrica}</div>
+        <div class = "azul">${this.preco}</div>
+
+        `;
      }
 
 }
 
 
 class ProdutoDestaque extends Produto{
-    constructor(nome, DatadeCadastro, Descricao, preco, produto_Destaque){
+    constructor(nome, DatadeCadastro, Descricao, preco){
         super(nome, DatadeCadastro, Descricao, preco);
-       this.produto_Destaque = produto_Destaque;
+        this.produtoDestaque = produtoDestaque;
     }
 
-    mostrarProdutos(){
-        //return this.nome + this.DatadeCadastro + this.Descricao + this.preco + this.produto_Destaque;
+    mostrarProDes(){
+        returnn `
+        <img src = "${this.produtoDestaque}">
+        <div class = "azul">${this.nome}</div>
+        <div class = "azul">${this.DatadeCadastro}</div>
+        <div class = "azul">${this.Descrica}</div>
+        <div class = "azul">${this.preco}</div>
 
-        return `
-        <div>${this.nome}</div>
-        <div>${this.DatadeCadastro}</div>
-        <div>${this.Descricao}</div>
-        <div>${this.preco}</div>
-        <div>${this.produto_Destaque}</div>
         `;
+        
+        //return this.nome + this.DatadeCadastro + this.Descricao + this.preco + ProdutoDestaque;
     }
 }
 
-const produto = new ProdutoDestaque("caneca gato ", "08/08/2013 ", "caneca", 30.00, "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.megashopsul.com.br%2Fcasa%2F5337-caneca-gato-preto-ceramica-com-tampa-cat-lovers.html&psig=AOvVaw1IpW3F05GxFda7oaVFPKBb&ust=1683222610022000&source=images&cd=vfe&ved=0CA4QjRxqFwoTCPjkv4bb2f4CFQAAAAAdAAAAABAE");
-console.log(produto.mostrarProdutos());
+const produto1 = new ProdutoDestaque ("canecaGato", "08/08/2006", "13579", "25.00", "https://m.media-amazon.com/images/I/614MhCvi9FL._AC_SX569_.jpg");
+console.log(produto1.mostrarProDes);
+const div1 = document.getElementById("Produto-destaque");
+div1.insertAdjacentElement("afterbegin", mostrarProDes());
 
-const div = document.getElementById("produto-destaque");
-div.insertAdjacentHTML("afterbegin", produto.mostrarProdutos());
+const produto2 = new ProdutoDestaque ("bolsagato", "09/09/2007", "97531", "35.00", "https://images.tcdn.com.br/img/img_prod/582257/bolsa_necessaire_gatos_2153_1_c178010bef628fae56d368295085b3a6.jpg");
+console.log(produto2.mostrarProDes);
+const div2 = document.getElementById("Produto-destaque");
+div2.insertAdjacentElement("afterbegin", mostrarProDes());
 
-const div2 = document.getElementById("lista-produtos");
-div.insertAdjacentHTML("afterbegin", );
+const produto3 = new ProdutoDestaque ("quadrogatomonalisa", "07/07/2007", "2468", "50.00", "https://img.elo7.com.br/product/original/15084EF/quadro-gato-monalisa-com-paspatur-quadro.jpg");
+console.log(produto3.mostrarProDes);
+const div3 = document.getElementById("Produto-destaque");
+div3.insertAdjacentElement("afterbegin", mostrarProDes());
+
+const produto4 = new ProdutoDestaque ("quadro2gato", "05/05/2005", "0000", "55.00", "https://m.media-amazon.com/images/I/513XIEcFxZL._AC_UL400_.jpg");
+console.log(produto4.mostrarProDes);
+const div4 = document.getElementById("Produto-destaque");
+div4.insertAdjacentElement("afterbegin", mostrarProDes());
 
 
