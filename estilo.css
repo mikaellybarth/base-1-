@@ -1,3 +1,30 @@
+
 body {
-  background: #CCC;
+  background-color: #9d8ba7;
 }
+
+.produto2-card {
+  margin: 30px;
+  background-color: #f7f7f8;
+  display: inline-block;
+  overflow: hidden;
+  padding: 5px;
+  height: 350px;
+  width: 250px;
+}
+
+.azul{
+  color:  #18279c;
+
+}
+
+.produto1-card {
+  margin: 30px;
+  background-color: #f7f7f8;
+  display: inline-block;
+  overflow: hidden;
+  padding: 5px;
+  height: 350px;
+  width: 250px;
+}
+
